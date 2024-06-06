@@ -1,0 +1,610 @@
+<style lang="scss">
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+  :root {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+
+    --color-background: #ffffff;
+    --color-card: #ffffff;
+    --color-panel: #f9f9f9;
+    --color-border-subtle: #f0f0f0;
+    --color-border: #e3e5e5;
+    --color-border-soft: #e3e5e5;
+    --color-text-primary: #212c33;
+    --color-text-secondary: #778085;
+    --color-text-tertiary: #c6cacc;
+    --color-accent-background: #334652;
+    --color-accent-forground: #ffffff;
+    --color-background-positive: #e0eee7;
+    --color-border-positive: #a7cdba;
+    --color-forground-positive: #3f755a;
+    --color-background-negative: #f2e2df;
+    --color-border-negative: #d9ada4;
+    --color-forground-negative: #86483b;
+    --color-error: #bd6455;
+    --color-focus: #f2f4f5;
+    --color-background-floating: #ffffff;
+    --color-forground-floating: #f0f0f0;
+    --color-underground: #f0f0f0;
+    --color-overylay: #1d2429;
+    --color-tooltip: #29343b;
+    --color-forground-tooltip: #ffffff;
+    --color-spinner-track: rgba(51, 70, 82, 0.4);
+    --color-spinner-bullet: rgba(51, 70, 82, 1);
+
+    --blue-background: #dfe8ed;
+    --blue-border: #a4bdca;
+    --blue-forground: #3b5f71;
+    --orange-background: #f0e5dc;
+    --orange-border: #d4b399;
+    --orange-forground: #80512c;
+    --yellow-background: #fcf4e3;
+    --yellow-border: #f7dfaf;
+    --yellow-forground: #b28f4b;
+
+    --grey--100: #ffffff;
+    --grey--200: #f9f9f9;
+    --grey--300: #f0f0f0;
+    --grey--400: #e3e5e5;
+    --grey--500: #c6cacc;
+    --grey--600: #778085;
+    --grey--700: #434c52;
+    --grey--800: #354047;
+    --grey--900: #29343b;
+    --primary--100: #f2f4f5;
+    --primary--200: #e4e8eb;
+    --primary--300: #c9d1d6;
+    --primary--400: #556570;
+    --primary--500: #334652;
+    --primary--600: #223642;
+    --primary--700: #142a38;
+    --primary--800: #0b1d29;
+    --primary--900: #081c29;
+    --green--100: #f6f9f7;
+    --green--200: #e2ede7;
+    --green--300: #aecbbb;
+    --green--400: #7eac91;
+    --green--500: #559e7a;
+    --green--600: #5e8f72;
+    --green--700: #4c735c;
+    --green--800: #2d4537;
+    --green--900: #141f19;
+    --red--100: #faf6f4;
+    --red--200: #efe3df;
+    --red--300: #d2aea6;
+    --red--400: #b77d6f;
+    --red--500: #bd6455;
+    --red--600: #9d5d4e;
+    --red--700: #7e4b3e;
+    --red--800: #4b2d25;
+    --red--900: #221411;
+    --orange--100: #f9f6f3;
+    --orange--200: #eee5dd;
+    --orange--300: #cfb49c;
+    --orange--400: #b28660;
+    --orange--500: #ad6d3b;
+    --orange--600: #97663e;
+    --orange--700: #795333;
+    --orange--800: #48311e;
+    --orange--900: #21160d;
+    --blue--100: #f4f7f9;
+    --blue--200: #e0e8ec;
+    --blue--300: #a8bcc8;
+    --blue--400: #7493a7;
+    --blue--500: #508199;
+    --blue--600: #53758b;
+    --blue--700: #435e6f;
+    --blue--800: #273842;
+    --blue--900: #000000;
+    --purple--100: #f4f4f8;
+    --purple--200: #dfdfec;
+    --purple--300: #a4a4c7;
+    --purple--400: #6c6da5;
+    --purple--500: #4f5194;
+    --purple--600: #494b88;
+    --purple--700: #3b3c6d;
+    --purple--800: #232441;
+    --purple--900: #10101e;
+    --yellow--100: #fdfbf6;
+    --yellow--200: #fbf4e5;
+    --yellow--300: #f3dfb4;
+    --yellow--400: #eccb88;
+    --yellow--500: #f0c165;
+    --yellow--600: #d6b36a;
+    --yellow--700: #ad8f55;
+    --yellow--800: #675532;
+    --yellow--900: #2f2717;
+    --baby_blue--100: #f5f9fc;
+    --baby_blue--200: #e0ebf4;
+    --baby_blue--300: #a8c8e0;
+    --baby_blue--400: #74a7ce;
+    --baby_blue--500: #4998c9;
+    --baby_blue--600: #558bb5;
+    --baby_blue--700: #447092;
+    --baby_blue--800: #284257;
+    --baby_blue--900: #121e27;
+    --violet--100: #f6f4f9;
+    --violet--200: #e5dfec;
+    --violet--300: #b4a5c7;
+    --violet--400: #856ea5;
+    --violet--500: #745099;
+    --violet--600: #664d89;
+    --violet--700: #523d6e;
+    --violet--800: #302441;
+    --violet--900: #16111e;
+    --beige--100: #fffefd;
+    --beige--200: #fdfcfa;
+    --beige--300: #fcf7f2;
+    --beige--400: #faf2e9;
+    --beige--500: #fcf0e4;
+    --beige--600: #e6ddd3;
+    --beige--700: #b9b2aa;
+    --beige--800: #6e6a65;
+    --beige--900: #32302e;
+    --pink--100: #fcf4f8;
+    --pink--200: #f6e0e9;
+    --pink--300: #e9a6c1;
+    --pink--400: #de729c;
+    --pink--500: #eb4c8a;
+    --pink--600: #c8527e;
+    --pink--700: #a14165;
+    --pink--800: #60263d;
+    --pink--900: #2b111c;
+    --brown--100: #faf8f8;
+    --brown--200: #eeebe9;
+    --brown--300: #cfc6c0;
+    --brown--400: #b2a399;
+    --brown--500: #a79184;
+    --brown--600: #97857b;
+    --brown--700: #796b63;
+    --brown--800: #48403b;
+    --brown--900: #201d1a;
+  }
+
+  [data-theme="dark"] {
+    --color-background: #1d2429;
+    --color-card: #1d2429;
+    --color-panel: #171f24;
+    --color-border-subtle: #242b30;
+    --color-border: #343b40;
+    --color-border-soft: #252c30;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #c6cacc;
+    --color-text-tertiary: #778085;
+    --color-accent-background: #505099;
+    --color-accent-forground: #ffffff;
+    --color-underground: #151c21;
+    --color-background-positive: rgba(85, 158, 122, 0.08);
+    --color-border-positive: rgba(85, 158, 122, 0.32);
+    --color-forground-positive: #559e7a;
+    --color-background-negative: rgba(181, 97, 80, 0.08);
+    --color-border-negative: rgba(181, 97, 80, 0.32);
+    --color-forground-negative: #b56150;
+    --color-error: #bd6455;
+    --color-focus: #343c55;
+    --color-background-floating: #242c30;
+    --color-forground-floating: #363e42;
+    --color-overylay: #1d2429;
+    --color-tooltip: #393f42;
+    --color-forground-tooltip: #393f42;
+    --color-spinner-track: rgba(255, 255, 255, 0.4);
+    --color-spinner-bullet: rgba(255, 255, 255, 1);
+
+    --blue-background: rgba(80, 129, 153, 0.08);
+    --blue-border: rgba(80, 129, 153, 0.32);
+    --blue-forground: rgb(80, 129, 153);
+    --orange-background: rgba(173, 109, 59, 0.08);
+    --orange-border: rgba(173, 109, 59, 0.32);
+    --orange-forground: #ad6d3b;
+    --yellow-background: rgba(240, 193, 101, 0.08);
+    --yellow-border: rgba(240, 193, 101, 0.32);
+    --yellow-forground: rgb(240, 194, 102);
+  }
+
+  .flyout-transition {
+    transform: translateY(0);
+  }
+  .flyout-transition-enter-active,
+  .flyout-transition-leave-active {
+    transition: all 0.15s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  }
+  .flyout-transition-enter-from,
+  .flyout-transition-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  * {
+    box-sizing: border-box;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  html {
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+  /* Document
+   ========================================================================== */
+
+  /**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+  html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+
+  /* Sections
+   ========================================================================== */
+
+  /**
+ * Remove the margin in all browsers.
+ */
+
+  body {
+    margin: 0;
+  }
+
+  /**
+ * Render the `main` element consistently in IE.
+ */
+
+  main {
+    display: block;
+  }
+
+  /**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Grouping content
+   ========================================================================== */
+
+  /**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+
+  /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+
+  /* Text-level semantics
+   ========================================================================== */
+
+  /**
+ * Remove the gray background on active links in IE 10.
+ */
+
+  a {
+    background-color: transparent;
+  }
+
+  /**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+
+  /**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+  b,
+  strong {
+    font-weight: bolder;
+  }
+
+  /**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+
+  /**
+ * Add the correct font size in all browsers.
+ */
+
+  small {
+    font-size: 80%;
+  }
+
+  /**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  /* Embedded content
+   ========================================================================== */
+
+  /**
+ * Remove the border on images inside links in IE 10.
+ */
+
+  img {
+    border-style: none;
+  }
+
+  /* Forms
+   ========================================================================== */
+
+  /**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+
+  /**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+  button,
+  input {
+    /* 1 */
+    overflow: visible;
+  }
+
+  /**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+  button,
+  select {
+    /* 1 */
+    text-transform: none;
+  }
+
+  /**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+
+  /**
+ * Remove the inner border and padding in Firefox.
+ */
+
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    /* border-style: none; */
+    padding: 0;
+  }
+
+  /**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+  /**
+ * Correct the padding in Firefox.
+ */
+
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+
+  /**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+
+  /**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+  progress {
+    vertical-align: baseline;
+  }
+
+  /**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+  textarea {
+    overflow: auto;
+  }
+
+  /**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+
+  /**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  /**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+  [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+
+  /**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  /**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+
+  /* Interactive
+   ========================================================================== */
+
+  /*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+  details {
+    display: block;
+  }
+
+  /*
+ * Add the correct display in all browsers.
+ */
+
+  summary {
+    display: list-item;
+  }
+
+  /* Misc
+   ========================================================================== */
+
+  /**
+ * Add the correct display in IE 10+.
+ */
+
+  template {
+    display: none;
+  }
+
+  /**
+ * Add the correct display in IE 10.
+ */
+
+  [hidden] {
+    display: none;
+  }
+</style>

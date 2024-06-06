@@ -1,0 +1,24 @@
+$border-radius-sm: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 16px;
+
+$border-subtle: 1px solid var(--color-border-subtle);
+$border: 1px solid var(--color-border);
+
+$box-shadow: 0px 16px 24px rgba(33, 44, 51, 0.06),
+  0px 2px 6px rgba(33, 44, 51, 0.04), 0px 0px 1px rgba(33, 44, 51, 0.04);
+
+// Z Index
+$z-index-negative: -1;
+$z-index-10: 10;
+$z-index-100: 100;
+$z-index-500: 500;
+$z-index-501: 501;
+$z-index-600: 600;
+$z-index-601: 601;
+$z-index-1000: 1000;
+
+// Magic numbers
+$drawer-max-width: 580px;
+$breakpoint-tablet: 1199px;
+$header-height: 90px;

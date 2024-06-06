@@ -1,0 +1,16 @@
+
+# Branch deploy context:
+# All deploys that are not from a pull/merge request
+# or from the production branch will inherit these settings.
+[context.staging]
+  command = "vite build --mode staging"
+
+# Branch deploy context:
+# All deploys that are not from a pull/merge request
+# or from the production branch will inherit these settings.
+[context.development]
+  command = "vite build --mode development"
+
+[context.branch-deploy]
+  command = "vite build --mode development"
+
